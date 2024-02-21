@@ -1,0 +1,54 @@
+/* TANTO PARA EL MARGIN PADDING Y BORDER =
+PODERMOS ESPECIFICAR O SUS CUATRO LADOS, O LLAMAR POR CADA PROPIEDAD SUS LADOS TAMBIEN*/
+/* MARGIN 
+TOP/RIGHT/BOTTOM/LEFT
+                1 valor= todos sus lados iguales
+                2 valores= primero Top/Bottom
+                3 valores= primero llama al Top y Bottom y por ultimo a Left y Right
+                Top y Bottom diferenter / Left y Right iguales
+                4 valores= especifico para cada lado*/
+
+/* PADDING ES EL RELLENO INTERNO*/
+
+#productosQueUtilizamos{
+    width:100%; /*ANCHO DEL ELEMENTO*/ 
+    /*height: 100vh ALTO DEL ELEMENTO*/ 
+    /*vh= 100% DISPONIBLE DE ALTO DE LA VISTA EN PANTALLA */
+    /*wh= 100% DISPONIBLE PERO DEL ANCHO DE LA VISTA EN PANTALLA*/
+    display: flex; /*un articulo al lado del otro*/
+    justify-content: center;/*centrar*/
+    gap: 20px; /*espacio entre las cajas*/
+    align-items: center; /*ajusto el alto de la caja*/
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    transition: 1s;
+}
+
+#productosQueUtilizamos__banner {
+        background-color: #81964D;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+.productosQueUtilizamos__box:active{
+    box-shadow: 3px 5px 5px #1F2129;
+    transition: 1s;
+    background-color: #1F2129;
+}
+
+.productosQueUtilizamos__box {
+    background-color: #1F2129;
+    width: 300px;
+    height: 60px;
+    overflow: auto;/*PROPIEDAD QUE AJUSTA EL CONTENIDO*/
+    display: flex;
+}
+
+.productosQueUtilizamos__box img{
+    width: 100%;
+}

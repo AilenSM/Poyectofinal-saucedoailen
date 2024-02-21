@@ -1,0 +1,824 @@
+@charset "UTF-8";
+/*ESTRUCTURA DE CSS*/
+/*SPV:
+    SELECTOR= ETIQUETA/CLASE/ID
+    PROPIEDAD= ATRIBUTO/CARACTERISTICA QUE DA ESTRUCTURA
+    VALOR= TAMAÑO O VALOR QUE ADQUIERE ESA PROPIEDAD*/
+/*///////////////
+ESTILOS RESET
+////////////////
+RESET CSS= ESTILOS RESETEADOS PARA TRABAJAR DESDE CERO, PARTIMOS DEL LLAMADO "*" = TODO EL DOC HTML*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
+* {
+  margin: 0; /*ESPACIO POR FUERA DE LA CAJA, DEL CONTORNO PARA AFUERA*/
+  padding: 0; /*RELLENO, ESPACIADO INTERNO*/
+  box-sizing: border-box; /*TAMAÑO DE CAJA O DOCUMENTO*/
+  font-family: "Raleway", sans-serif;
+}
+
+/*TIPOGRAFIA Raleway DISPLAY PARA TODO EL DOC*/
+/*TIPOGRAFIA Nunito Sans DISPLAY PARA HEADER Y FOOTER*/
+/*LLAMAMOS A LA LISTA PARA SACAR TODOS LOS ESTILOS QUE TIENE*/
+li {
+  list-style: none;
+}
+
+/*ETIQUETA DE LINK*/
+a {
+  display: inline-block;
+  font-style: none;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  color: #1F2129;
+  transition: 1s;
+}
+
+/*/////////////////
+ESTILO BODY
+////////////////////*/
+#body {
+  max-width: 1920px;
+  margin: o auto; /*CENTRADO DE CONTENIDO HORIZONTALMENTE*/
+}
+
+#main {
+  min-height: 100vh; /*ALTO MINIMO= MAIN OCUPANDO SIEMPPRE EL 100% DEL VIEWPORT/VISTA DISPONIBLE EN PANTALLA*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*@MIXIN-$*/
+/*///////////////
+ESTILOS DEL NAVBAR/HEADER
+///////////////////*/
+#header {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #81964D;
+  width: 100%;
+}
+#header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+#header .navbar .nav-item {
+  display: flex;
+}
+#header .navbar .nav-link {
+  gap: 2px;
+  transition: 1s;
+}
+#header .navbar .nav-link:hover {
+  color: white;
+  transition: 1s;
+}
+#header .navbar .navbar_text {
+  display: flex;
+  align-items: center;
+}
+#header .navbar .automatic-car-wash {
+  width: 50px;
+  height: 60px;
+}
+
+/*///////////////
+ESTILOS DEL FOOTER
+////////////*/
+/*LOS ATRIBUTOS LOS LLAMAMOS DE LA SIGUIENTE MANERA=
+ID= #
+CLASS= .
+ETIQUETAS/SELECTOR= POR SU NOMBRE*/
+#footer {
+  margin-top: auto;
+  width: 100%; /*ANCHO, el 100% del ancho disponible en pantalla*/
+  /*    height: 150px; ALTO, genera el espacio respecto al contenido alojado dentro*/
+  background-color: #81964D; /*COLOR DE FONDO*/
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+#footer .footerLogo {
+  width: 50px;
+  margin: 10px;
+  font-size: 25px;
+  overflow: auto;
+}
+#footer .footerLinks a {
+  letter-spacing: 2px;
+  font-size: 15px;
+  transition: 1s;
+}
+#footer .footerLinks a:hover {
+  color: white;
+  transition: 1s;
+  font-size: 15px;
+}
+#footer .footerRedes {
+  display: flex;
+  gap: 10px;
+  border-radius: 100%;
+  transition: 1s;
+}
+#footer .footerRedes:hover {
+  color: white;
+  font-size: 25px;
+  transition: 1s;
+}
+#footer .footerRedes i {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  height: 50px;
+  width: 100%;
+}
+
+/*/////////////////////////////
+IMPORTS PAGE INICIO
+////////////////////////////*/
+/*/////////////////////////////
+BREACKPOINTS HEADER
+////////////////////////////*/
+@media (max-width: 576px) {
+  #header {
+    flex-direction: column;
+  }
+  .nav-link {
+    flex-direction: column;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .navbar-nav {
+    justify-content: center;
+  }
+}
+/*/////////////////////////////
+BREACKPOINTS INICIO
+////////////////////////////*/
+@media (max-width: 576px) {
+  #pageInicio__grid {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "inicioGrid1" "inicioGrid2";
+  }
+  .carousel-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-texto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  #productosQueUtilizamos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  #productosQueUtilizamos__banner .productosQueUtilizamos__box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*/////////////////////////////
+BREACKPOINTS SERVICIOS
+////////////////////////////*/
+@media (max-width: 576px) {
+  #serviciosGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 200px);
+    grid-template-areas: "serviciosGrid1" "serviciosGrid2" "serviciosGrid3" "serviciosGrid4" "serviciosGrid5" "serviciosGrid6" "serviciosGrid7" "serviciosGrid8";
+  }
+  /*/////////////////////////////
+  BREACKPOINTS NOSOTROS
+  ////////////////////////////*/
+  #nosotrosGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 300px);
+    grid-template-areas: "nosotrosGridTexto1" "nosotrosGridTexto2" "nosotrosGridImg" "nosotrosGridTexto3";
+  }
+  #footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .productosQueUtilizamos__box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*/////////////////
+ESTILO INDEX/MAIN/GRILLAS
+////////////////////*/
+/*//////////////////////
+LAS ETIQUETAS EN LINEA NO NOS PERMITEN MODIFICAR SU ESTRUCTURA
+LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA 
+//////////////////////*/
+#pageInicio__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "inicioGrid1" "inicioGrid2";
+}
+
+.pageInicio__grid1 {
+  grid-area: inicioGrid1;
+}
+
+.pageInicio__grid2 {
+  grid-area: inicioGrid2;
+}
+
+.pageInicio-grid1__p {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 6px;
+  transition: 1s;
+}
+
+.pageInicio-grid1__p:hover {
+  color: #81964D;
+  letter-spacing: 10px;
+  transition: 1s;
+}
+
+.pageInicio-grid2__p {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  transition: 1s;
+}
+
+.pageInicio-grid2__p:hover {
+  color: #81964D;
+  letter-spacing: 3px;
+  transition: 1s;
+}
+
+.carousel-inner {
+  height: 100%;
+  margin: 20px;
+  width: 100%;
+}
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 70vh;
+}
+
+.carousel-texto {
+  background-color: #81964D;
+  color: white;
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+/* TANTO PARA EL MARGIN PADDING Y BORDER =
+PODERMOS ESPECIFICAR O SUS CUATRO LADOS, O LLAMAR POR CADA PROPIEDAD SUS LADOS TAMBIEN*/
+/* MARGIN 
+TOP/RIGHT/BOTTOM/LEFT
+                1 valor= todos sus lados iguales
+                2 valores= primero Top/Bottom
+                3 valores= primero llama al Top y Bottom y por ultimo a Left y Right
+                Top y Bottom diferenter / Left y Right iguales
+                4 valores= especifico para cada lado*/
+/* PADDING ES EL RELLENO INTERNO*/
+#productosQueUtilizamos {
+  width: 100%; /*ANCHO DEL ELEMENTO*/
+  /*height: 100vh ALTO DEL ELEMENTO*/
+  /*vh= 100% DISPONIBLE DE ALTO DE LA VISTA EN PANTALLA */
+  /*wh= 100% DISPONIBLE PERO DEL ANCHO DE LA VISTA EN PANTALLA*/
+  display: flex; /*un articulo al lado del otro*/
+  justify-content: center; /*centrar*/
+  gap: 20px; /*espacio entre las cajas*/
+  align-items: center; /*ajusto el alto de la caja*/
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  transition: 1s;
+}
+
+#productosQueUtilizamos__banner {
+  background-color: #81964D;
+  color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.productosQueUtilizamos__box:active {
+  box-shadow: 3px 5px 5px #1F2129;
+  transition: 1s;
+  background-color: #1F2129;
+}
+
+.productosQueUtilizamos__box {
+  background-color: #1F2129;
+  width: 300px;
+  height: 60px;
+  overflow: auto; /*PROPIEDAD QUE AJUSTA EL CONTENIDO*/
+  display: flex;
+}
+
+.productosQueUtilizamos__box img {
+  width: 100%;
+}
+
+/*/////////////////////////////
+IMPORTS PAGE PRODUCTOS
+////////////////////////////*/
+#productosBanner {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 25px;
+  transition: 1s;
+}
+#productosBanner:hover {
+  color: #81964D;
+  transition: 1s;
+}
+
+#pageProductosGrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 200px 100px 200px 200px 100px 200px;
+  gap: 20px;
+  margin: 20px;
+}
+#pageProductosGrid .pageProductos_marcas {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: normal;
+  width: 100%;
+  font-size: 25px;
+}
+#pageProductosGrid .pageProductosGrid_K78_imgLimpiaTapizado {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_K78_textoLimpiaTapizado1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#pageProductosGrid .pageProductosGrid_K78_textoLimpiaTapizado2 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_K78_imgDetailer {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_k78_textoDetailer1 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+#pageProductosGrid .pageProductosGrid_k78_textoDetailer2 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_revigal_imgLimpiaCristales {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_revigal_textoLimpiaCristales1 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+#pageProductosGrid .pageProductosGrid_revigal_textoLimpiaCristales2 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_revigal_imgLimpiaInteriores {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_revigal_textoLimpiaInteriores1 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+#pageProductosGrid .pageProductosGrid_revigal_textoLimpiaInteriores2 {
+  grid-column: 5/6;
+  grid-row: 3/4;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_imgGuanteMicrofibra {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_textoGuanteMicrofibra1 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_textoGuanteMicrofibra2 {
+  grid-column: 2/3;
+  grid-row: 6/7;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_imgPañoMicrofibra {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_textoPañoMicrofibra1 {
+  grid-column: 3/4;
+  grid-row: 5/6;
+}
+#pageProductosGrid .pageProductosGrid_laffitte_textoPañoMicrofibra2 {
+  grid-column: 3/4;
+  grid-row: 6/7;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_3D_imgEspumaLimpieza {
+  grid-column: 4/5;
+  grid-row: 4/5;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_3D_textoEspumaLimpieza1 {
+  grid-column: 4/5;
+  grid-row: 5/6;
+}
+#pageProductosGrid .pageProductosGrid_3D_textoEspumaLimpieza2 {
+  grid-column: 4/5;
+  grid-row: 6/7;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductosGrid_3D_imgLimpiadorVinilo {
+  grid-column: 5/6;
+  grid-row: 4/5;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+#pageProductosGrid .pageProductosGrid_3D_textoLimpiadorVinilo1 {
+  grid-column: 5/6;
+  grid-row: 5/6;
+}
+#pageProductosGrid .pageProductosGrid_3D_textoLimpiadorVinilo2 {
+  grid-column: 5/6;
+  grid-row: 6/7;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+#pageProductosGrid .pageProductos_texto1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
+  background-color: #81964D;
+  transition: 1s;
+}
+#pageProductosGrid .pageProductos_texto1:hover {
+  transition: 1s;
+  color: white;
+}
+#pageProductosGrid .pageProductos_texto2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+}
+
+/*/////////////////////////////
+IMPORTS PAGE SERVICIOS
+////////////////////////////*/
+/*///////////////
+ESTILOS DE PAGE SERVICIOS/GRILLAS
+////////////*/
+#main h1 {
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+
+#serviciosGrid {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 100px 200px;
+  gap: 20px;
+  height: 100vh;
+  margin: 20px;
+  grid-template-areas: "serviciosGrid1 serviciosGrid2 serviciosGrid3 serviciosGrid4" "serviciosGrid5 serviciosGrid7 serviciosGrid9 serviciosGrid11" "serviciosGrid6 serviciosGrid8 serviciosGrid10 serviciosGrid12";
+}
+
+.serviciosGrid1 {
+  grid-area: serviciosGrid1;
+}
+
+.serviciosGrid2 {
+  grid-area: serviciosGrid2;
+}
+
+.serviciosGrid3 {
+  grid-area: serviciosGrid3;
+}
+
+.serviciosGrid4 {
+  grid-area: serviciosGrid4;
+}
+
+.serviciosGrid5 {
+  grid-area: serviciosGrid5;
+}
+
+.serviciosGrid6 {
+  grid-area: serviciosGrid6;
+}
+
+.serviciosGrid7 {
+  grid-area: serviciosGrid7;
+}
+
+.serviciosGrid8 {
+  grid-area: serviciosGrid8;
+}
+
+.serviciosGrid9 {
+  grid-area: serviciosGrid9;
+}
+
+.serviciosGrid10 {
+  grid-area: serviciosGrid10;
+}
+
+.serviciosGrid11 {
+  grid-area: serviciosGrid11;
+}
+
+.serviciosGrid12 {
+  grid-area: serviciosGrid12;
+}
+
+.boxGrid img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.boxGrid img:active {
+  box-shadow: 5px 8px 8px #1F2129;
+  transition: 1s;
+}
+
+.boxGridTexto {
+  display: grid;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+  align-items: center;
+  transition: 1s;
+  background-color: #81964D;
+}
+
+.boxGridTexto:hover {
+  color: #F5F2FF;
+  transition: 1s;
+}
+
+.boxGridTexto2 {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 2px;
+  font-size: 15px;
+  transition: 1s;
+}
+
+.boxGridTexto2:hover {
+  color: #81964D;
+  transition: 1s;
+}
+
+/*/////////////////////////////
+IMPORTS PAGE NOSOTROS
+////////////////////////////*/
+#nosotrosBanner {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 25px;
+  transition: 1s;
+}
+#nosotrosBanner:hover {
+  color: #81964D;
+  transition: 1s;
+}
+
+#nosotrosGrid {
+  display: grid;
+  width: 100%;
+  gap: 25px;
+  font-size: 25px;
+  text-align: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: "nosotrosGrid_Img1 nosotrosGridTexto2" "nosotrosGrid_Img2 nosotrosGridTexto3";
+  margin: 20px;
+  padding: 10px;
+}
+
+.boxNosotrosGridTexto {
+  display: flex;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boxNosotrosGridImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.nosotrosGrid_Img1 {
+  grid-area: nosotrosGrid_Img1;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.nosotrosGrid_Img1 .nosotrosGrid_textoDeImg1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+
+.nosotrosGridTexto2 {
+  grid-area: nosotrosGridTexto2;
+}
+
+.nosotrosGrid_Img2 {
+  grid-area: nosotrosGrid_Img2;
+}
+
+.nosotrosGridTexto3 {
+  grid-area: nosotrosGridTexto3;
+}
+
+/*/////////////////////////////
+IMPORTS PAGE CONTACTO
+////////////////////////////*/
+#contactoBanner {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 25px;
+  transition: 1s;
+}
+#contactoBanner:hover {
+  color: #81964D;
+  transition: 1s;
+}
+
+#contactoGrilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+}
+#contactoGrilla .contactoGrilla_iframe, #contactoGrilla .contactoGrilla_legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+#contactoGrilla .contactoGrilla_datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+#contactoGrilla .contactoGrilla_interactivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 10px;
+  width: 100%;
+  font-size: 25px;
+}
+#contactoGrilla .contactoGrilla_enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  width: 100%;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

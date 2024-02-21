@@ -1,0 +1,114 @@
+/*/////////////////////////////
+BREACKPOINTS HEADER
+////////////////////////////*/
+@media(max-width:360px){
+    #header{
+        flex-direction: column;
+    }
+    .nav-link{
+        flex-direction: column;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+        .navbar-nav{
+            justify-content: center;
+        }
+}
+
+/*/////////////////////////////
+BREACKPOINTS INICIO
+////////////////////////////*/
+
+@media(max-width: 360px){
+    #pageInicio__grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "inicioGrid1" 
+        "inicioGrid2"
+        ;
+    }
+    .carousel-inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-item{
+        display: flex;
+        justify-content: center;
+    }
+    .carousel-texto{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    #productosQueUtilizamos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    #productosQueUtilizamos__banner .productosQueUtilizamos__box{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*/////////////////////////////
+BREACKPOINTS SERVICIOS
+////////////////////////////*/
+/// 
+@media(max-width: 360px) {
+    #serviciosGrid{
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(8, 200px);
+        grid-template-areas: 
+        "serviciosGrid1"
+        "serviciosGrid2"
+        "serviciosGrid3"
+        "serviciosGrid4"
+        "serviciosGrid5"
+        "serviciosGrid6"
+        "serviciosGrid7"
+        "serviciosGrid8"
+        ;
+    }
+
+/*/////////////////////////////
+BREACKPOINTS NOSOTROS
+////////////////////////////*/
+    #nosotrosGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 300px);
+        grid-template-areas: 
+        "nosotrosGridTexto1"
+        "nosotrosGridTexto2"
+        "nosotrosGridImg"
+        "nosotrosGridTexto3"
+        ;
+    }
+
+    #footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+}
+
+@media (max-width: 576px){
+    .productosQueUtilizamos__box{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

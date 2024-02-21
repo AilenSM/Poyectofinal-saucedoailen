@@ -1,0 +1,32 @@
+@import "reset";                                    
+@import "header";
+@import "footer";
+
+
+/*/////////////////////////////
+IMPORTS PAGE INICIO
+////////////////////////////*/
+@import "inicio/breackpoints";
+@import "inicio/main-grillas";
+@import "inicio/productos-que-utilizamos";
+
+/*/////////////////////////////
+IMPORTS PAGE PRODUCTOS
+////////////////////////////*/
+@import "productos/grillas-productos";
+
+
+/*/////////////////////////////
+IMPORTS PAGE SERVICIOS
+////////////////////////////*/
+@import "servicios/grillas-servicios";
+
+/*/////////////////////////////
+IMPORTS PAGE NOSOTROS
+////////////////////////////*/
+@import "nosotros/grilla-nosotros";
+
+/*/////////////////////////////
+IMPORTS PAGE CONTACTO
+////////////////////////////*/
+@import "contacto/grilla-contacto"

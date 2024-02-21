@@ -1,0 +1,79 @@
+/*/////////////////
+ESTILO INDEX/MAIN/GRILLAS
+////////////////////*/
+
+/*//////////////////////
+LAS ETIQUETAS EN LINEA NO NOS PERMITEN MODIFICAR SU ESTRUCTURA
+LAS ETIQUETAS EN BLOQUE NOS PERMITEN MODIFICAR SU ESTRUCTURA 
+//////////////////////*/
+#pageInicio__grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "inicioGrid1" 
+    "inicioGrid2"
+    ;
+}
+
+.pageInicio__grid1{
+    grid-area: inicioGrid1;
+}
+
+.pageInicio__grid2{
+    grid-area: inicioGrid2;
+}
+
+.pageInicio-grid1__p{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 6px;
+    transition: 1s;
+}
+
+.pageInicio-grid1__p:hover {
+    color:#81964D;
+    letter-spacing: 10px;
+    transition: 1s;
+}
+
+.pageInicio-grid2__p{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    transition: 1s;
+}
+
+.pageInicio-grid2__p:hover{
+    color:#81964D;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+
+.carousel-inner{
+    height: 100%;
+    margin: 20px;
+    width: 100%;
+        .carousel-item img{
+            width: 100%;
+            height: 70vh;
+        }
+}
+.carousel-texto{
+    background-color: #81964D;
+    color: white;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+}

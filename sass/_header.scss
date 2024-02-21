@@ -1,0 +1,41 @@
+/*///////////////
+ESTILOS DEL NAVBAR/HEADER
+///////////////////*/
+
+#header {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #81964D;
+    width: 100%;
+        .navbar{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            flex-wrap: nowrap;
+        .nav-item{
+            display: flex;
+        }
+        .nav-link {
+            gap: 2px;
+            transition: 1s;
+            &:hover{
+                color: white;
+                transition: 1s;
+            }
+        }
+        .navbar_text{
+            display: flex;
+            align-items: center;
+        }
+        .automatic-car-wash{
+            width: 50px;
+            height: 60px;
+        }
+    }
+}
+
+
+

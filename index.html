@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- LIRERIA DE FONT AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- LIRERIA DE BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- LIRERIA DE ICON8-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css" integrity="sha512-dC0G5HMA6hLr/E1TM623RN6qK+sL8sz5vB+Uc68J7cBon68bMfKcvbkg6OqlfGHo1nMmcCxO5AinnRTDhWbWsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- LIRERIA DE CSS-->
+        <link rel="stylesheet" href="css/style.css">
+        <title>A&M Carwash</title>
+    </head>
+
+    <body id="body">
+        <!-- #1 CREAMOS EL HEADER-->
+        <header id="header">
+            <nav class="navbar">
+                <section class="navbar">
+                    <a class="navbar" href="#"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/automatic-car-wash.png" alt="automatic-car-wash"/></a>
+                <article class="navbar">
+                    <ul class="navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                    </ul>
+                </article>
+                </section>
+            </nav>
+        </header>
+        <!-- #2 CREAMOS EN MAIN-->
+        <main id="main">
+                <!-- -->
+        <!-- ATRIBUTOS EN ORDEN JERARQUICO=
+            ID=IDENTIFICAN UNICAMENTE AL PADRE O RAIZ
+            CLASS= IDENTIFICAN AL CONTENIDO DE LA RAIZ
+            ETIQUETAS= COMUNMENTE UTILIZADAS EN HTML-->
+                <section id="pageInicio__grid">
+                <article class="pageInicio__grid1"><p class="pageInicio-grid1__p">A y M CARWASH</p></article>
+                <article class="pageInicio__grid2 pageInicio-grid2__p"><p>Dale brillo a tu auto</p>
+                    <p>Lavadero artesanal y limpieza de tapizados</p></article>
+            </section>
+
+            <!--IMPORTANTE
+            los ID solo se pueden utilizar una sola vez
+            las clases o class se pueden repetir tantas veces nosotros queramos-->
+
+            <div class="container">
+                <article class="carousel-texto"><p>Nuestros Trabajos</p></article>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/imagenes/carousel-inicio/carusel-img4.jpg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/imagenes/carousel-inicio/carusel-img5.jpg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/imagenes/carousel-inicio/carusel-img6.jpg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/imagenes/carousel-inicio/carusel-img7.jpg" alt="...">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+        <section id="productosQueUtilizamos">
+            <article id="productosQueUtilizamos__banner">
+                <p>Productos que utilizamos</p>
+            </article>
+
+            <article class="productosQueUtilizamos__K78 productosQueUtilizamos__box">
+                <img src="imagenes/k78" alt="">
+            </article>
+
+            <article class="productosQueUtilizamos__Revigal productosQueUtilizamos__box">
+                <img src="imagenes/revigal" alt="">
+            </article>
+
+            <article class="productosQueUtilizamos__Laffitte productosQueUtilizamos__box">
+                <img src="imagenes/laffitte" alt="">
+            </article>
+
+            <article class="productosQueUtilizamos__3D productosQueUtilizamos__box">
+                <img src="imagenes/3D.jpeg" alt="">
+            </article>
+        </section>
+        </main>
+
+        <!-- #3 CREAMOS EL FOOTER-->
+        <footer id="footer"> 
+
+            <article class="footerLogo">
+                <img class="footerLogoImg" src="icons/logo-chico.png" alt="">
+            </article>
+
+            <article class="footerLinks">
+                <ul><!-- unorder list= lista desordenada-->
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/servicios.html">Servicios</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+            </article>
+
+            <article class="footerRedes">
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </article>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    </body>
+</html>
